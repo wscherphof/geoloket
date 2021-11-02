@@ -10,13 +10,10 @@
 <body>
     <script src="https://tst.geoloket.nl/api/geoloket.js"></script>
     <script>
-        function login() {
-            GeoLoket("TEST").then((user) => {
-                alert(JSON.stringify(user));
-            });
-        }
+        GeoLoket("TEST").then((user) => {
+            alert(JSON.stringify(user));
+        });
     </script>
-    <button onclick="login()">Inloggen</button>
 </body>
 
 </html>
