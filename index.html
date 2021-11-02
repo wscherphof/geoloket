@@ -9,9 +9,11 @@
 <body>
     <script src="https://tst.geoloket.nl/api/geoloket.js"></script>
     <script>
-        GeoLoket("TEST").then((user) => {
-            alert(JSON.stringify(user));
-        });
+        if (confirm("Inloggen?")) {
+            GeoLoket("TEST").then((user) => {
+                alert(JSON.stringify(user));
+            });
+        }
     </script>
 </body>
 
