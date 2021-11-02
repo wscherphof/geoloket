@@ -2,6 +2,7 @@
 <html>
 
 <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="utf-8" />
     <title>GeoLoket TEST</title>
 </head>
@@ -9,12 +10,13 @@
 <body>
     <script src="https://tst.geoloket.nl/api/geoloket.js"></script>
     <script>
-        if (confirm("Inloggen?")) {
+        function login() {
             GeoLoket("TEST").then((user) => {
                 alert(JSON.stringify(user));
             });
         }
     </script>
+    <button onclick="login()">Inloggen</button>
 </body>
 
 </html>
