@@ -13,7 +13,7 @@
         GeoLoket("TEST").then((user) => {
             alert(JSON.stringify(user));
             fetch("https://tst.geoloket.nl/geoserver/wms?SERVICE=WMS&VERSION=1.3.0&CRS=EPSG:28992&BBOX=237200,581850,237300,581900&VIEWPARAMS=authorization:$%7bAUTHORIZATION%7d%3Bsrid:28992%3Bminx:237200%3Bminy:581850%3Bmaxx:237300%3Bmaxy:581900&LAYERS=GeoWEP:meetpunten&REQUEST=GetFeatureInfo&QUERY_LAYERS=GeoWEP:meetpunten&INFO_FORMAT=application/json&FEATURE_COUNT=1000&I=0&J=0&WIDTH=1&HEIGHT=1", {
-              "credentials": "include"
+              credentials: "include",
             })
             .then(response => response.json())
             .then(json => alert(JSON.stringify(json)))
